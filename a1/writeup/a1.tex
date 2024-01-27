@@ -145,40 +145,31 @@
 \begin{question}{1.2 N-gram Language Modeling \& Perplexity (28\%)}
     \begin{part}
        \begin{answer}
-        \subsection*{Building N-gram Models}
-            I built the N-gram models in several key steps:
-
-            \begin{enumerate}
-                \item \textbf{Data Preprocessing:} Each line in the dataset are treated as a sequence. The sequence was tokenized using whitespace as the delimiter. Special tokens were added for the start (START) and end (STOP) of sequences.
-                \item \textbf{Vocabulary Construction:} The vocabulary was built from the training data, with rare words (appearing less than three times) replaced by a special 'UNK' token. The final vocabulary size for the training set was 26,602.
-                \item \textbf{Unigram Model:} The unigram model was constructed by counting the frequency of each token in the training data. This model did not incorporate START tokens, as they do not influence the probability of unigrams. Each token’s probability was calculated based on its frequency relative to the total number of tokens.
-
-                \item \textbf{ Bigram Model:} The bigram model involved calculating the frequencies of pairs of consecutive tokens (bigrams). This model included bigrams starting with the START token to capture the beginning of sentences. Probabilities of bigrams were computed as the frequency of the bigram divided by the frequency of its first token.
-
-                \item \textbf{ Trigram Model:} Similarly, the trigram model was developed by calculating frequencies of triplets of consecutive tokens. It included trigrams that began with one or two START tokens, representing the beginning of sentences. The probability of a trigram was calculated as the frequency of the trigram divided by the frequency of its first two tokens.
-
-                \item \textbf{Special Handling of START and STOP Tokens:} The START token was specially handled in the bigram and trigram models. While it did not form part of the vocabulary (as it is not predicted), it was used as a contextual token at the beginning of sentences. The STOP token was included in all models to signify the end of sentences.
-            \end{enumerate}
-
-            \textbf{Model Sizes:}
-                \begin{tabular}{|c|c|}
+        First, each line in the dataset are treated as a sequence. The sequence was tokenized using whitespace as the delimiter. Special tokens were added at the start (START) and end (STOP) of sequences.
+        The vocabulary was built from the training data. Tokens appearing less than three times replaced by an (UNK) token. The final vocabulary size for the training set was 26,602.\\
+         My unigram model was constructed by counting the frequency of each token in the training data. The (START) token is not considered since they don't influence the probability of unigrams. I calculated each token's probability base on its frequency relative to the total number of tokens.\\
+         My bigram model was built by calculating the frequencies of pairs of consecutive tokens. I included bigrams starting with (START) token to get the beginning of sentences. I calculated the probabilities of bigrams as the frequency of the bigram divided by the frequency of its first token.\\
+      The trigram model was similar to bigram expect we calculate the frequencies of triplets of consecutive tokens instead. The model includes trigrams that began with one or two (START) tokens. The probability of a trigram was calculated as the frequency of the trigram divided by the frequency of its first two tokens.\\
+      All three models has an option to turn on laplace smoothing in which case we add 1 to each count and calculate the probabilities as the frequency of the n-gram plus 1 divided by the frequency of its first $n-1$ tokens plus the size of the vocabulary. \\
+Model Sizes:
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Model Type} & \textbf{Number of N-grams} \\
                     \hline
-                    \textbf{Model Type} & \textbf{Number of N-grams} \\
-                        \hline
-                        Unigram & 26,602 \\
-                        \hline
-                        Bigram & 510,391 \\
-                        \hline
-                        Trigram & 1,116,160 \\
-                        \hline
-                \end{tabular}
+                    Unigram & 26,602 \\
+                    \hline
+                    Bigram & 510,391 \\
+                    \hline
+                    Trigram & 1,116,160 \\
+                    \hline
+            \end{tabular}
         \end{answer}
+
     \end{part}
-\newpage
+
     \begin{part}
         \begin{answer}
-            \subsection*{Computing Perplexity without Smoothing}
-            Perplexity without smoothing was calculated using the following approach:
+            Perplexity without smoothing was calculated as the following:
 
             \begin{equation}
                 PPL(S) = \exp \left( -\frac{1}{|S|} \sum_{i=1}^{|S|} \log P(s_i | s_1,...,s_{i-1}) \right)
@@ -195,19 +186,17 @@
 
          \end{answer}
      \end{part}
-
+\newpage
      \begin{part}
         \begin{answer}
-            \subsection*{Potential Downsides of Laplace Smoothing}
-
-                Laplace smoothing disproportionately inflates the probabilities of rare n-grams by adding 1 to each count.
-                Since probabilities has to add up to 1, this effectively reduces the probabilities of more frequent n-grams,
-                which might bias the model towards rare n-grams. \\
+                Laplace smoothing disproportionately inflates the probabilities of n-grams with low probabilities.
+                Since probabilities has to add up to 1, adding 1 counts to each n-grams effectively reduces the probabilities of more frequent n-grams,
+                which might bias the model towards n-grams with low probabilities. \\
 
                 \textbf{Empirical Evidence:}
                 Comparing the perplexity scores of the training set with and without Laplace smoothing,
                 we can see that the perplexity of the unigram model is relatively stable, but a significant
-                increase is observed for the bigram and trigram models.
+                increase is observed for the bigram and trigram models:
                 \\\\
                 \begin{tabular}{|c|c|c|}
                 \hline
@@ -224,7 +213,6 @@
 
      \begin{part}
         \begin{answer}
-            \subsection*{Effect of Different Laplace Smoothing Factors}
 
              When \( k \) is small, model gives a high perplexity due to underestimating the probability of unseen N-grams.
              As \( k \) increases, the model starts giving lower perplexities, when values of \( k \) approaching 1
@@ -234,13 +222,11 @@
             I believe this is related to bias and variance tradeoff, where we need to use empirical methods to find the optimal value of \( k \).
          \end{answer}
      \end{part}
-\newpage
+
      \begin{part}
         \begin{answer}
-            \subsection*{Perplexity Scores of N-gram Models}
 
-            The perplexity scores for unigram, bigram, and trigram models were calculated both with and without Laplace smoothing.
-            These scores describe the performance of the models in predicting the sequences in the dataset.
+            The perplexity scores for unigram, bigram, and trigram models describe the performance of the models in predicting the sequences in the dataset.
 
             \textbf{Perplexity without Smoothing:}
             \begin{tabular}{|c|c|c|c|}
@@ -254,7 +240,7 @@
             \end{tabular}\\
 
 
-            In the bigram and trigram models, when evaluated on the validation and test datasets, the perplexity reached an infinite value. This occurred due to the probability of some bigram/trigrams being zero. Given that no smoothing technique was applied in this instance, it is reasonable for the perplexity to be infinite.\\
+            In the bigram and trigram models, when evaluated on the validation and test datasets, the perplexity reached an infinite value. This probably because the probability of some bigram/trigrams being zero. Given that no smoothing technique was applied in this instance, it is reasonable for the perplexity to be infinite.\\
 
             \textbf{Perplexity with Laplace Smoothing:}
             \begin{tabular}{|c|c|c|c|}
@@ -268,7 +254,7 @@
             \end{tabular}\\
 
             With Laplace smoothing, the perplexity of the unigram model remains relatively stable, but a significant increase is observed for the bigram and trigram models.
-            It shows that Laplace smoothing resolves issues with unseen N-grams but, at the same time, may introduce inaccuracies in the estimation of N-gram probabilities for higher-order models.
+            It shows that Laplace smoothing resolves issues with unseen N-grams but, at the same time, may introduce inaccuracies in N-gram probabilities for higher-order models.
             Here we might be oversmoothing the bigram and trigram models, which gives to a much higher perplexity score after smoothing.
          \end{answer}
      \end{part}
@@ -278,7 +264,6 @@
 \begin{question}{1.3 Interpolation (17\%)}
     \begin{part}
         \begin{answer}
-            \subsection*{Finding Optimal Combinations of \( \lambda_1, \lambda_2, \lambda_3 \) for Interpolation}
 
                 The goal was to minimize perplexity, which means a better predictive model.\\
                 \textbf{Experiment Results:}
@@ -299,7 +284,7 @@
 
                 The strategy is gradually shifting the weight from unigram towards bigram and trigram models.
                 Since the weight on higher-order n-grams increased, we see a general trend of reduced training perplexity
-                but development and test perplexity increased. It suggests that higher-order
+                but development and test perplexity increased. Meaning that higher-order
                 n-grams are more predictive on training data, but they may overfit unseen data.
 
          \end{answer}
@@ -307,16 +292,14 @@
 
      \begin{part}
         \begin{answer}
-            \subsection*{Test Set Perplexity with Optimal Hyperparameters}
 
             The optimal combination of hyperparameters are chosen based on their lowest perplexity on the development set.
 
             \textbf{Optimal Hyperparameters:}
-            \begin{itemize}
-                \item \( \lambda_1 = 0.33 \)
-                \item \( \lambda_2 = 0.33 \)
-                \item \( \lambda_3 = 0.34 \)
-            \end{itemize}
+\( \lambda_1 = 0.33 \),
+ \( \lambda_2 = 0.33 \),
+ \( \lambda_3 = 0.34 \)
+
 
             \textbf{Perplexity on Test Set:} 376.34
 
@@ -325,10 +308,9 @@
 \newpage
      \begin{part}
         \begin{answer}
-            \subsection*{Impact of Reduced Training Data on Perplexity}
 
-            With half the training data, I would expect the perplexity to decrease. Because in my implementation, I replace unseen words with 'UNK' tokens, when
-            we reduce the training data, we would expect to see a lot more 'UNK' tokens which gives a more general model (less variety in vocabulary). When evaluating
+            With half the training data, I would expect the perplexity to decrease. Because in my implementation, I replace unseen words with UNK tokens, when
+            we reduce the training data, we would expect to see a lot more UNK tokens which gives a more general model (less variety in vocabulary). When evaluating
             on the dev and test set we would have a lower perplexity.\\
 
             \textbf{Empirical Evidence:}
@@ -354,13 +336,12 @@
 
      \begin{part}
         \begin{answer}
-            \subsection*{Effect of Different UNK Thresholds on Perplexity}
 
-            Increasing this threshold (from tokens appearing three times to those appearing less than five times) increases the number of 'UNK' tokens,
+            Increasing this threshold (from tokens appearing three times to those appearing less than five times) increases the number of UNK tokens,
             making the model more general and potentially less sensitive to changes in the language.
 
             \textbf{Empirical Evidence:}
-            In my experiments, increasing the 'UNK' threshold to 5 led to a decrease in perplexity across, dev and test sets (compare to part(a)).
+            In my experiments, increasing the UNK threshold to 5 gives a decrease in perplexity across, dev and test sets (compare to part(a)).
 
             \begin{tabular}{|c|c|c|c|c|c|}
                 \hline
@@ -383,53 +364,107 @@
 \begin{question}{2 Byte-Pair Encoding (BPE) (30\%) }
     \begin{part}
         \begin{answer}
-            
+                \includegraphics[width=1\textwidth]{../scatter.png}
+
+                The final vocabulary size after training the BPE tokenizer is \textbf{9124} types.
+                The total length of the training data under the final type vocabulary is \textbf{110469}.
+
         \end{answer}
      \end{part}
 
      \begin{part}
         \begin{answer}
-            
+            Character-level encoding has no out-of-vocabulary issues and can be more generally applied to text with different contents.
+            However, breaking sequences into characters gives longer sequences and
+            also loses the semantic context (e.g. "happy" and "ppahy" made up by the same token, one makes sense to human
+            but the other one doesn't).
+            BPE, however, gives a more balance solution between OOV issues and semantic context.
+            Because it creates a vocabulary of subword units, instead of single characters, from frequent bigrams in the
+            training data. BPE, compare to character-level encoding, reduces sequence length and maintains more semantic information, but
+            its performance can be heavily dependent on the representativeness of the training corpus (e.g. if the training corpus is trained on
+            computer science papers, it might not perform well on medical papers).
+
         \end{answer}
      \end{part}
-
+\newpage
      \begin{part}
         \begin{answer}
-            
+            1. Applying the trained BPE tokenizer on the last 1000 lines of the dataset gave a total of \textbf{30126} tokens.\\
+            2. The tokenizer seems to be able to handle unseen words
+            by breaking them down to smaller known units, which might be why the total number of tokens is relatively quite high.\\
+            3. In general, I expect the BPE tokenizer to perform reasonably well on texts that are similar to its training corpus.
+            I would expect my tokenizer to fail on texts that are very different from the training corpus, such as domain-specific texts
+            that contains a lot of special terms that are not in the training corpus.
+
         \end{answer}
      \end{part}
 \end{question}
 
 %%%%%%%%%%%%%%%%%%%%%%%% Task 4 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}{3 WordPiece (25\%)} 
+\begin{question}{3 WordPiece (25\%)}
     \begin{part}
         \begin{answer}
-            
+            \includegraphics[width=1\textwidth]{../scatter2.png}
+
+                The final vocabulary size after training the WordPiece tokenizer is \textbf{4158} types.
+                The total length of the training data under the final type vocabulary is \textbf{319769}.
         \end{answer}
      \end{part}
      
 
      \begin{part}
         \begin{answer}
-            
+            1. Applying the trained WordPiece tokenizer on the last 1000 lines of the dataset gave a total of \textbf{79223} tokens.\\
+            2. Tokenized sequence for i): 
+
+            ['A', 'n', 'a', 'l', 'y', 's', 't', 's', 'w', 'e', 'r', 'e', 'expecting', 'the', 'o', 'p', 'p', 'o', 's', 'i', 't', 'e', ',', 'a', 'd', 'e', 'e', 'p', 'e', 'n', 'ing', 'of', 'the', 'd', 'e', 'f', 'i', 'c', 'i', 't', '.']\\
+
+            3. Tokenized sequence for ii): 
+
+
+            ['Five', 'm', 'i', 'n', 'u', 't', 'e', 's', 'l', 'a', 't', 'e', 'r', ',', 'a', 's', 'e', 'c', 'o', 'nd', 'p', 'e', 'r', 's', 'o', 'n', 'a', 'r', 'r', 'i', 've', 'd', ',', 'a', 'g', 'ed', 'around', 'th', 'i', 'r', 't', 'y,', 'with', 'k', 'n', 'i', 'f', 'e', 'w', 'o', 'u', 'n', 'd', 's', '.']
+
         \end{answer}
      \end{part}
 
      \begin{part}
         \begin{answer}
+            Assuming that my implementations were correct:\\
+            WordPiece seems to be better at preserving coherent semantics, while BPE tends to chop up words into smaller chunks. In the
+            two sentences we above the tokens that are more than 2 characters tends to have semantic meanings (e.g. 'nd', 'ing', 'ed', and all the full words).
+            This might be good for things like translation where we want to preserve the meaning of the subwords can be important.\\
+            On the downside, WordPiece's takes a really long time to build up vocabulary compared to BPE. In my implementation, WordPiece took more than twice the time to build up
+            less than half the vocabulary size of BPE (575 sec for vocab size of 4158 vs 215 sec for vocab size of 9124).\\
+            So I think BPE might be better for tasks that require a large vocabulary size, such as language modeling, and WordPiece might be better for tasks that require
+            a smaller vocabulary size but more semantic information, such as translation.\\
+
+            Tokenized sequence using BPE:\\
+            for i): 
             
+            ['Analy', 'sts', 'were', 'expect', 'ing', 'the', 'oppos', 'ite,', 'a', 'deep', 'ening', 'of', 'the', 'deficit.'] \\
+
+
+            for ii): 
+            
+            ['Five', 'minutes', 'later,', 'a', 'second', 'person', 'arri', 'ved,', 'aged', 'around', 'thir', 'ty,', 'with', 'kni', 'fe', 'wo', 'und', 's.']
         \end{answer}
      \end{part}
 
 \end{question}
 
 %%%%%%%%%%%%%%%%%%%%%%%% Task 5 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{question}{4 Open-ended Exploration for Tokenization (10\% for 517, extra credit for 447)}
-    \begin{part}
-        \begin{answer}
-           
-        \end{answer}
-     \end{part}
+\begin{question}{Acknowledgement}
+   
+    \begin{answer}
+        This assignment was completed by Sebastian Liu.
+        ChatGPT 3.5 and Github Copilot were used as a human collaborator to:
+        \begin{itemize}
+            \item Ask conceptual questions about N-gram models, Laplace smoothing, interpolation, BPE, and WordPiece. (e.g. What is perplexity and why it works?)
+            \item Ask how-to questions related to python. (e.g. How to use regex in python? How to concatenate any number of strings in python?)
+            \item Generate repetitive, long sequences of print statement in experiments. (e.g. calling and print perplexities for different lambda values in interpolation)
+        \end{itemize}
+    \end{answer}
+
 \end{question}
 \end{document}
 
