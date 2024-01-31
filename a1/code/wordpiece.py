@@ -71,7 +71,7 @@ def wordpiece_apply(lines, wp_vocab):
                         break
 
                 if not found:
-                    # If no subword is found, treat it as <unk>
+                    # <unk> for OOV
                     tokens.append('<unk>')
                     break
 
