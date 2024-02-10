@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  30 JAN 2024 18:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  10 FEB 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,60 +895,336 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: fc-english.def 2016/01/12
 )
 \c@lstlisting=\count408
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 149.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 149.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 149.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 149.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 149.
+(Font)              <10> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 149.
+(Font)              <7> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 149.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
+(Font)              <5> on input line 195.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 195.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./a2.aux)
+ []
+
+
+Overfull \hbox (8.62816pt too wide) in paragraph at lines 195--195
+\OT1/cmss/m/n/10 (-20) Therefore, the query vec-tor should be $[]$.
+ []
+
+
+Overfull \hbox (10.90816pt too wide) detected at line 195
+\OT1/cmss/m/n/10 (-20) Therefore, the query vec-tor should be $[]$.
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 195
+
+ []
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 251
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 288.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<sequence_length_in_the_train_dataset_by_tokens.png, id=59, 425.6703pt x 328.8285pt>
+File: sequence_length_in_the_train_dataset_by_tokens.png Graphic file (type png)
+<use sequence_length_in_the_train_dataset_by_tokens.png>
+Package pdftex.def Info: sequence_length_in_the_train_dataset_by_tokens.png  used on input line 288.
+(pdftex.def)             Requested size: 181.9221pt x 140.53549pt.
+
+Underfull \hbox (badness 10000) detected at line 288
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 288
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 288
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 288
+
+ []
+
+[4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./sequence_length_in_the_train_dataset_by_tokens.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 296
+
+ []
+
+<../experiments/wo_changes/training_step_vs_loss.png, id=68, 416.2752pt x 312.2064pt>
+File: ../experiments/wo_changes/training_step_vs_loss.png Graphic file (type png)
+<use ../experiments/wo_changes/training_step_vs_loss.png>
+Package pdftex.def Info: ../experiments/wo_changes/training_step_vs_loss.png  used on input line 351.
+(pdftex.def)             Requested size: 131.53845pt x 98.65518pt.
+<../experiments/additive_attention/training_step_vs_loss.png, id=69, 416.2752pt x 312.2064pt>
+File: ../experiments/additive_attention/training_step_vs_loss.png Graphic file (type png)
+<use ../experiments/additive_attention/training_step_vs_loss.png>
+Package pdftex.def Info: ../experiments/additive_attention/training_step_vs_loss.png  used on input line 351.
+(pdftex.def)             Requested size: 131.53845pt x 98.65518pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 351
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 351
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 351
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 351
+
+ []
+
+[5 <../experiments/wo_changes/training_step_vs_loss.png> <../experiments/additive_attention/training_step_vs_loss.png>]
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 373.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 373.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 410
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 410
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 410
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 423
+
+ []
+
+[7]
+File: ../experiments/wo_changes/training_step_vs_loss.png Graphic file (type png)
+<use ../experiments/wo_changes/training_step_vs_loss.png>
+Package pdftex.def Info: ../experiments/wo_changes/training_step_vs_loss.png  used on input line 490.
+(pdftex.def)             Requested size: 131.53845pt x 98.65518pt.
+<../experiments/masking/training_step_vs_loss.png, id=95, 416.2752pt x 312.2064pt>
+File: ../experiments/masking/training_step_vs_loss.png Graphic file (type png)
+<use ../experiments/masking/training_step_vs_loss.png>
+Package pdftex.def Info: ../experiments/masking/training_step_vs_loss.png  used on input line 490.
+(pdftex.def)             Requested size: 131.53845pt x 98.65518pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+
+ []
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 490.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 490.
+
+[8 <../experiments/masking/training_step_vs_loss.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 507--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--507
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 507
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 507
+
+ []
+
+[9] [10] [11] (./a2.aux)
 Package rerunfilecheck Info: File `a2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: DABF47E316C700177208C35804C499D0;1891.
  ) 
 Here is how much of TeX's memory you used:
- 54210 strings out of 476025
- 1324072 string characters out of 5790017
- 2113114 words of memory out of 5000000
- 74036 multiletter control sequences out of 15000+600000
- 525385 words of font info for 54 fonts, out of 8000000 for 9000
+ 54429 strings out of 476025
+ 1328272 string characters out of 5790017
+ 2146114 words of memory out of 5000000
+ 74136 multiletter control sequences out of 15000+600000
+ 529189 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,5n,118p,1634b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on a2.pdf (3 pages, 24400 bytes).
+ 117i,17n,118p,1634b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
+Output written on a2.pdf (11 pages, 249258 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 5645 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 15961 words of extra memory for PDF output out of 17280 (max. 10000000)
 
