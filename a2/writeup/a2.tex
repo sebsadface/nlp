@@ -9,6 +9,7 @@
 \usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{blindtext}
+\usepackage{subcaption}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -515,99 +516,153 @@
     \subsection{Finetunning Your Own RoBERTa Model}
     \begin{part}[Q1.1]
         \begin{answer}
-
+            \textbf{padding:} makes sure all the sequences in a batch have the same length by padding the shorter sequences to be the same length as the longest sequence in a batch.\\
+            \textbf{max\_length:} defines the max length of the sequences returned by the tokenizer.\\
+            \textbf{truncation:} truncates the sequences to the max\_length if they exceed the max\_length.\\
+            \textbf{return\_tensors:} specifies the format of the returned tokens. "pt" means that the output should be PyTorch tensors.
         \end{answer}
     \end{part}
 
     \begin{part}[Q1.2]
         \begin{answer}
-
+            \textbf{padding=True:} making sure all sequences in a batch has the same length allows makes the computation and memory allocation more efficient, since same sized tensors can be processed in parallel.\\
+            \textbf{max\_length=512:} 512 seems to be a common empirical choice for balancing the amount of context and computation efficiency. \\
+            \textbf{truncation=True:} makes sure we don't get size mismatch, helps with memory and computation efficiency.
+            \textbf{return\_tensors="pt":} makes the results compatible with the rest of our PyTorch code, which is convenient since we don't need to manually convert data formats.
         \end{answer}
     \end{part}
 
     \begin{part}[Q2.1]
         \begin{answer}
-
+            \textbf{length of training set:} 6920 \\
+            \textbf{length of validation set:} 872 \\
+            \textbf{length of test set:} 1821
         \end{answer}
     \end{part}
 
     \begin{part}[Q2.2]
         \begin{answer}
-
+            \textbf{batch\_size:} defines the number of samples that will be loaded in each iteration of the training or evaluation.\\
+            \textbf{shuffle:} shuffling the order of samples in the dataset in each epoch, which might be good in training to prevent learning from ordering patterns in training data, but here we set to false for validation.\\
+            \textbf{collate\_fn:} the function used to encode samples into a batch of tensor, in this case we use the function we implemented in step 1.\\
+            \textbf{num\_workers:} the number of processes to use for data loading.
         \end{answer}
     \end{part}
-
+\newpage
     \begin{part}[Q2.3]
         \begin{answer}
-
+            \textbf{input\_ids:} a torch.LongTensor of shape torch.Size([64, 45]) which contains the tokenized representations of the texts (token ids) in the batch.\\
+            \textbf{attention\_mask:} a torch.LongTensor of shape torch.Size([64, 45]) which indicates which tokens is valid (masked with 1) and which is not (masked with 0) (paddings).\\
+            \textbf{label\_encoding:} a torch.LongTensor of shape torch.Size([64]) which contains the sentiment labels for each sample (0 for negative, 1 for positive).
         \end{answer}
     \end{part}
 
     \begin{part}[Q3.1]
         \begin{answer}
-
+            \textbf{optimizer.zero\_grad():} clears out the old gradients from the previous batch, which make sure that the gradients doesn't add up across batches. \\
+            \textbf{loss.backward():} backpropagation, computes the gradient of the loss w.r.t to trained model parameters.
+            \textbf{optimizer.step():} one step of gradient descent, updates the model's parameters based on gradients from loss.backward() to minimize the loss.\\
         \end{answer}
     \end{part}
 
     \begin{part}[Q3.2]
         \begin{answer}
-
+            \textbf{model.train():} enables training specific behaviors. E.g. dropout some layers to prevent overfitting, and set normalization layers to update their running avgs, etc.\\
+            \textbf{model.eval():} disables training specific behaviors.  Making sure that normalization uses its running avgs instead of the current batch's stats which is important for evaluation.
         \end{answer}
     \end{part}
 
     \begin{part}[Q3.3]
         \begin{answer}
-
+            \textbf{with torch.no\_grad()} improves memory and computation efficiency by not tracking gradients during the forward pass, which is not needed for evaluation.
         \end{answer}
     \end{part}
-
+\newpage
     \begin{part}[Q4.1]
         \begin{answer}
-
+            \includegraphics[width=0.85\linewidth]{./trainvsvalid_acc.png}
         \end{answer}
     \end{part}
 
     \begin{part}[Q4.2]
         \begin{answer}
+            \textbf{Behavior:} Training accuracy increase significantly in the first few epochs, then it starts to plateau around 99\% after the fourth epoch.
+            Validation accuracy fluctuates around 92\% throughout the ten epochs, with a drop to 91\% in the last epoch.\\
+            \textbf{Best Accuracy: } Training accuracy: 9th epoch, with an accuracy of about 99.3\%.
+             Validation accuracy: 6th epoch, with an accuracy of about 93\%.\\
 
+             \textbf{The training and validation accuracy do not follow the same trend.}\\
+            \textbf{Reason:}
+            This mismatch in trend might be because the model is overfitting to the training data learning the noise with the underlying patterns, which increases training accuracy but not able to generalize.
+            That's probably why we see a decline in validation accuracy after the 6th epoch.
         \end{answer}
     \end{part}
 
     \begin{part}[Q4.3]
         \begin{answer}
-
+            Shuffling the training data helps prevent the model from learning the order of the data, which makes the model generalize better for unseen data.\\
+            Not Shuffling in validation data is because we want to consistently evaluate the model's performance on the same sequence of data across different epochs,
+            which gives a better comparison of model accuracy.
         \end{answer}
     \end{part}
-
+\newpage
     \begin{part}[Q4.4]
         \begin{answer}
-
+            Optimizers adjust the parameters of the model to minimize the loss function, it updates the model weights based on the gradients from backpropagation.
+            Optimizers control the speed and direction of gradient descent (a.k.a learning), which can help model more accurately converges to a optimal.
         \end{answer}
     \end{part}
 
     \begin{part}[Q4.5]
+            \begin{figure}[h]
+                \centering
+                \begin{subfigure}{.495\textwidth}
+                  \centering
+                  \includegraphics[width=\linewidth]{./sgd.png}
+                  \caption{SGD without Momentum}
+                \end{subfigure}
+                \begin{subfigure}{.495\textwidth}
+                  \centering
+                  \includegraphics[width=\linewidth]{./rmsprop.png}
+                  \caption{RMSProp}
+                \end{subfigure}
+            \end{figure}
         \begin{answer}
-
+            Based on the graphs above, we see that with the given hyperparameters AdamW outperforms SGD and RMSprop in terms of training accuracy by a significant margin.
+            With the given hyperparameters, SGD see some fluctuation in training accuracy (around 0.518) while validation accuracy stayed exactly the same at 0.509 throughout the epochs. RMSProp
+            shows a similar patterns except that the validation accuracy saw a drop in the second epoch to 0.49 and both training and validation accuracy stayed around the 0.51 level throughout the epochs.
+            The data shows that with the given hyperparameters, both SGD and RMSProp are not able to further improvements after the first epoch, while AdamW is able to consistently improve the training accuracy.
         \end{answer}
     \end{part}
 
     \begin{part}[Q4.6]
         \begin{answer}
-
+            I randomly picked four combinations of batch size (32, 64), learning rate (2e-5, 3e-5, 4e-5, 5e-5, 6e-5, 7e-5, 8e-5), and the number
+            of epochs (10, 15, 20). (I couldn't go higher for batch size because google colab won't give me enough memory for T4 GPU).\\
+            I used random search because I want to try to cover a wider range of combinations with very limited resources.
         \end{answer}
     \end{part}
 
     \begin{part}[Q4.7]
         \begin{answer}
-
+            The best combination: batch size of 64, learning rate of 3e-5, and 15 epochs. Training Accuracy: 0.996242774566474, Validation Accuracy: 0.9380733944954128.
         \end{answer}
     \end{part}
-
+\newpage
     \begin{part}[Q5.1]
         \begin{answer}
-
+            Best Test Accuracy: 0.9456342668863262
         \end{answer}
     \end{part}
+\end{question}
+\begin{question}{Acknowledgement}
+   
+    \begin{answer}
+        This assignment was completed by Sebastian Liu.
+        ChatGPT 3.5 were used as a human collaborator to ask conceptual questions about dot-product attention, additive attention, attention masking, and the internals
+        of different optimizers.
+    \end{answer}
+
 \end{question}
 \end{document}
 
