@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%% PACKAGE IMPORTS %%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{import}
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{fullpage}       
+\usepackage{changepage}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{subcaption}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+\newenvironment{level}%
+{\addtolength{\itemindent}{2em}}%
+{\addtolength{\itemindent}{-2em}}
+
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage[nooldvoltagedirection]{circuitikz}
+\usetikzlibrary{decorations,arrows,shapes}
+
+\usepackage{datetime}
+\usepackage{etoolbox}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{varwidth}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[linguistics]{forest}
+\usepackage{listings}
+\usepackage{xcolor}
+\renewcommand{\rmdefault}{cmss}
+
+
+\newcommand\doubleplus{+\kern-1.3ex+\kern0.8ex}
+\newcommand\mdoubleplus{\ensuremath{\mathbin{+\mkern-10mu+}}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    morecomment=[l][\color{magenta}]{\#},
+    backgroundcolor=\color{backcolour},   
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+
+\providetoggle{questionnumbers}
+\settoggle{questionnumbers}{true}
+\newcommand{\noquestionnumbers}{
+    \settoggle{questionnumbers}{false}
+}
+
+\newcounter{questionCounter}
+\newenvironment{question}[2][\arabic{questionCounter}]{%
+    \ifnum\value{questionCounter}=0 \else {\newpage}\fi%
+    \setcounter{partCounter}{0}%
+    \vspace{.25in} \hrule \vspace{0.5em}%
+    \noindent{\bf \iftoggle{questionnumbers}{Question #1: }{}#2}%
+    \addtocounter{questionCounter}{1}%
+    \vspace{0.8em} \hrule \vspace{.10in}%
+}
+
+\newcounter{partCounter}[questionCounter]
+\renewenvironment{part}[1][\alph{partCounter}]{%
+    \addtocounter{partCounter}{1}%
+    \vspace{.10in}%
+    \begin{indented}%
+       {\bf (#1)} %
+}{\end{indented}}
+
+\def\indented#1{\list{}{}\item[]}
+\let\indented=\endlist
+\def\show#1{\ifdefempty{#1}{}{#1\\}}
+\def\IMP{\longrightarrow}
+\def\AND{\wedge}
+\def\OR{\vee}
+\def\BI{\leftrightarrow}
+\def\DIFF{\setminus}
+\def\SUB{\subseteq}
+
+
+\newcolumntype{C}{>{\centering\arraybackslash}m{1.5cm}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newtcolorbox{answer}
+{
+  colback   = green!5!white,    % Background colorucyitc,
+  colframe  = green!75!black,   % Outline color
+  box align = center,           % Align box on text line
+  varwidth upper,               % Enables multi line input
+  hbox                          % Bounds box to text width
+}
+
+\newcommand{\myhwname}{CSE 447 Assignment 4}
+\newcommand{\myname}{Sebastian Liu}
+\newcommand{\myemail}{ll57@cs.washington.edu}
+\newcommand{\mysection}{AB}
+\newcommand{\dollararrow}{\stackrel{\$}{\leftarrow}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% Document Options %%%%%%%%%%%%%%%%%%%%%%
+\noquestionnumbers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% WORK BELOW %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+    \textbf{Assignment 4} \bigskip
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Task 1 %%%%%%%%%%%%%%%%%%%%%%%%M
+\begin{question}{1.}
+   
+\end{question}
+
+\begin{question}{2. }
+    
+\end{question}
+
+\begin{question}{3. }
+   
+\end{question}
+
+\begin{question}{Acknowledgement}
+   
+    \begin{answer}
+        This assignment was completed by Sebastian Liu.
+        ChatGPT 3.5 were used as a human collaborator to ask conceptual questions about RL, DPO, expected correlations between different hyperparameters, the internals
+        of different PyTorch functions, and how to train the models locally using Mac's gpu.
+    \end{answer}
+
+\end{question}
+\end{document}
+
