@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  27 FEB 2024 19:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.31)  5 MAR 2024 18:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,61 +925,143 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: fc-english.def 2016/01/12
 )
 \c@lstlisting=\count412
- [1
-
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 164.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 164.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 164.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 164.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 164.
+(Font)              <10> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 164.
+(Font)              <7> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 164.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 164.
+(Font)              <5> on input line 153.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 164.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 153.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [4] (./a4.aux)
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 153.
+LaTeX Font Info:    No file OMScmss.fd. on input line 153.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbackslash' on input line 153.
+
+[1
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 193
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 252
+
+ []
+
+[4]
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 268.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 268.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 286
+
+ []
+
+[5{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] [6] [7] (./a4.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `a4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 55619 strings out of 476025
- 1351643 string characters out of 5790017
- 2137424 words of memory out of 5000000
- 75433 multiletter control sequences out of 15000+600000
- 525450 words of font info for 55 fonts, out of 8000000 for 9000
+ 55764 strings out of 476025
+ 1353624 string characters out of 5790017
+ 2148424 words of memory out of 5000000
+ 75515 multiletter control sequences out of 15000+600000
+ 527615 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,5n,118p,1634b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on a4.pdf (4 pages, 26996 bytes).
+ 117i,7n,118p,1634b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on a4.pdf (7 pages, 131598 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 5645 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 6669 words of extra memory for PDF output out of 10000 (max. 10000000)
 
